@@ -1,0 +1,52 @@
+body {
+  background: #1a3c70;
+  display: flex;
+ 
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Tepada kvadrat */
+.square {
+  width: 80px;
+  height: 80px;
+  background: #ffffff;
+  animation: moveUpDown 3s infinite ease-in-out;
+}
+
+@keyframes moveUpDown {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-50px) scale(1.1); }
+  100% { transform: translateY(0); }
+}
+
+/* O‘rtada aylanadigan kvadrat */
+.rotating {
+  width: 80px;
+  height: 80px;
+  background: pink;
+  animation: spin 4s infinite linear;
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg) scale(1); }
+  50%  { transform: rotate(180deg) scale(1.2); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* Pastda aylana */
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: lightgreen;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0) scale(1); }
+  50%  { transform: translateY(-60px) scale(0.9); }
+  100% { transform: translateY(0) scale(1); }
+}
